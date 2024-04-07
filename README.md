@@ -1,0 +1,1 @@
+# csm-core-installer
