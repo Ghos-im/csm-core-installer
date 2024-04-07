@@ -1,0 +1,48 @@
+
+{
+	"name": "ghos-im/csm-core-installer",
+	"description": "Un installateur personnalisé pour gérer le déploiement de Ghosim CSM avec composer",
+	"keywords": [
+		"Ghosim"
+	],
+	"type": "composer-plugin",
+	"license": "GPL-2.0-or-later",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"authors": [
+		{
+			"name": "gim",
+			"email": "admin@ghos-im.net"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"gim\\Composer\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\gim\\Composer\\": "tests/"
+		}
+	},
+	"extra": {
+		"class": "gim\\Composer\\GhosimCorePlugin"
+	},
+	"require": {
+		"composer-plugin-api": "^1.0 || ^2.0",
+		"php": ">=5.6.0"
+	},
+	"require-dev": {
+		"composer/composer": "^1.0 || ^2.0",
+		"phpunit/phpunit": ">=5.7.27"
+	},
+	"conflict": {
+		"composer/installers": "<1.0.6"
+	},
+	"scripts": {
+		"test:phpunit": "phpunit",
+		"test": [
+			"@test:phpunit"
+		]
+	}
+}
